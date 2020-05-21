@@ -38,7 +38,7 @@ const App = () => {
                 <Nav.Link eventKey="1" as={Link} to="/projects">
                   Projects
                 </Nav.Link>
-                <Nav.Link eventKey="2"  as={Link} to="/experience">
+                <Nav.Link eventKey="2" as={Link} to="/experience">
                   Experience
                 </Nav.Link>
               </Nav>

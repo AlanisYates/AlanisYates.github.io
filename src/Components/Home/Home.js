@@ -13,10 +13,18 @@ export const Home = () => {
           <h3 className="sub-text text-focus-in-1">Full Stack Developer</h3>
         </div>
         <div className="social text-focus-in-2">
-          <a href="https://www.linkedin.com/in/alanis-yates/" target="blank" className="github">
+          <a
+            href="https://www.linkedin.com/in/alanis-yates/"
+            target="blank"
+            className="github"
+          >
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://github.com/AlanisYates" target="blank" className="linked-in">
+          <a
+            href="https://github.com/AlanisYates"
+            target="blank"
+            className="linked-in"
+          >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
         </div>
