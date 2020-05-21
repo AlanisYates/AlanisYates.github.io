@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Home } from "./Components/Home/Home";
 import "./App.css";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,6 +10,7 @@ import { Experiencs } from "./Components/Experience/Experiencs";
 import Container from "react-bootstrap/Container";
 
 const App = () => {
+  const [active, setActive] = useState(false);
   return (
     <div className="App">
       <Router>
@@ -24,10 +25,14 @@ const App = () => {
             }}
           >
             <Navbar.Brand
+              href="#"
               as={Link}
               to="/"
               style={{
                 fontSize: "1.7rem",
+              }}
+              onClick={() => {
+                setActive(false);
               }}
             >
               Alanis Yates
@@ -35,10 +40,22 @@ const App = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
-                <Nav.Link eventKey="1" as={Link} to="/projects">
+                <Nav.Link
+                  href="#"
+                  eventKey={1}
+                  as={Link}
+                  active={active}
+                  to="/projects"
+                >
                   Projects
                 </Nav.Link>
-                <Nav.Link eventKey="2" as={Link} to="/experience">
+                <Nav.Link
+                  href="#"
+                  as={Link}
+                  eventKey={2}
+                  active={active}
+                  to="/experience"
+                >
                   Experience
                 </Nav.Link>
               </Nav>
