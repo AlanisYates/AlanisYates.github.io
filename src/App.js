@@ -10,7 +10,9 @@ import { Experiencs } from "./Components/Experience/Experiencs";
 import Container from "react-bootstrap/Container";
 
 const App = () => {
-  const [active, setActive] = useState(false);
+  const [expActive, setExpActive] = useState();
+  const [projectActive, setProjectActive] = useState();
+  const [expand, setExpand] = useState();
   return (
     <div className="App">
       <Router>
@@ -23,6 +25,7 @@ const App = () => {
               backgroundColor: "black",
               fontSize: "1.5rem",
             }}
+            expanded={expand}
           >
             <Navbar.Brand
               href="#"
@@ -32,20 +35,32 @@ const App = () => {
                 fontSize: "1.7rem",
               }}
               onClick={() => {
-                setActive(false);
+                setProjectActive(false);
+                setExpActive(false);
+                setExpand(false);
               }}
             >
               Alanis Yates
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              onClick={() => {
+                setExpand(!expand);
+              }}
+            />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
                 <Nav.Link
                   href="#"
                   eventKey={1}
                   as={Link}
-                  active={active}
+                  active={projectActive}
                   to="/projects"
+                  onClick={() => {
+                    setProjectActive(true);
+                    setExpand(false);
+                    setExpActive(false);
+                  }}
                 >
                   Projects
                 </Nav.Link>
@@ -53,8 +68,13 @@ const App = () => {
                   href="#"
                   as={Link}
                   eventKey={2}
-                  active={active}
+                  active={expActive}
                   to="/experience"
+                  onClick={() => {
+                    setExpActive(true);
+                    setProjectActive(false);
+                    setExpand(false);
+                  }}
                 >
                   Experience
                 </Nav.Link>

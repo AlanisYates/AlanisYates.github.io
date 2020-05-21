@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export const Experiencs = () => {
-    return (
-        <div>
-            <h1>This is the Experiencs Page</h1>
-        </div>
-    )
-}
+  return (
+    <div
+      style={{
+        height: "100vh",
+      }}
+    >
+      <h1>This is the Experience Page</h1>
+    </div>
+  );
+};
