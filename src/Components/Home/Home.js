@@ -14,16 +14,18 @@ export const Home = () => {
         </div>
         <div className="social text-focus-in-2">
           <a
-            href="https://www.linkedin.com/in/alanis-yates/"
-            target="blank"
+            href="https://github.com/AlanisYates"
+            target="_blank"
             className="github"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href="https://github.com/AlanisYates"
-            target="blank"
+            href="https://www.linkedin.com/in/alanis-yates/"
+            target="_blank"
             className="linked-in"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
