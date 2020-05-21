@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 
+
 const width = "100%";
 
 export const Projects = () => {
@@ -12,6 +13,7 @@ export const Projects = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
 
   return (
@@ -23,7 +25,7 @@ export const Projects = () => {
       <h1
         style={{
           color: 'white',
-          fontWeight: ''
+          fontWeight: '700'
         }}
       >
         Projects
@@ -42,33 +44,62 @@ export const Projects = () => {
             src="https://alanisyates.github.io/img/projects/Spot-on.png"
           />
           <Card.Body>
-            <Card.Title>Card title that wraps to a new line</Card.Title>
-            <Card.Text>
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </Card.Text>
-            <Button variant="primary" onClick={handleShow} style={{marginRight: '1rem'}}>
+            <Card.Title>
+              <h2>Spot-On</h2>
+            </Card.Title>
+            <Button
+              href="https://spot-on.netlify.app/"
+              target="_blank"
+              onClick={handleClose}
+              variant="light"
+              style={{ marginRight: '1rem' }}
+            >
+              Live Demo
+            </Button>
+            <Button variant="light" onClick={handleShow} >
               More Info
             </Button>
-       
+
 
             <Modal show={show} onHide={handleClose}
-
               size="lg"
               aria-labelledby="contained-modal-title-vcenter"
               centered
             >
               <Modal.Header closeButton>
                 <Modal.Title id="example-custom-modal-styling-title">
-                  Spor On
+                  <h1>Spot-On</h1>
                 </Modal.Title>
               </Modal.Header>
               <Modal.Body >
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam dolorem numquam culpa, repellendus quod ipsum alias saepe ex sapiente laudantium fugiat voluptatibus aliquam dignissimos quibusdam autem. Dicta molestias adipisci rem facere quae corrupti itaque animi veritatis fugit quidem quisquam suscipit culpa voluptates eius incidunt, natus in ipsum hic nostrum! Quos hic dolorem aperiam nisi odit laborum eum laboriosam, vero dolor minima? Earum veniam dolorum nihil delectus recusandae animi dolore corrupti porro velit assumenda beatae, deleniti voluptates inventore. Architecto neque, eum quos in ipsam quae sunt aut, iste commodi vero aliquid. Quidem neque eum alias, voluptatum fuga atque. Maiores, ipsum iusto.</p>
+                <div>
+                  <p style={{
+                    fontWeight: '500'
+                  }}>
+                    A web app built with React that allows the user to create spotify playlist on their account all on the same screen. </p>
+                    
+                    <p style={{
+                    fontWeight: '500'
+                  }}>Utilized react components, state management, HTTP and JSON requests to create a dynamic web application.
+                  Created and implemented a responsive website design with SCSS.</p>
+
+                  <hr />
+                  <h4 style={{ fontWeight: '900', fontSize: '1.5rem' }}>Built With:</h4>
+                  <ul style={{
+                    fontWeight: '500',
+                    listStyle: 'square'
+
+
+                  }}>
+                    <li>React.js</li>
+                    <li>Spotify Api</li>
+                    <li>Node.js</li>
+                    <li>SCSS/SASS</li>
+                  </ul>
+                </div>
               </Modal.Body>
               <Modal.Footer>
-                <Button href="https://spot-on.netlify.app/" target="_blank" onClick={handleClose}>View Code</Button>
+                <Button href="https://github.com/pokalama/Spot-" target="_blank" onClick={handleClose}>View Code</Button>
               </Modal.Footer>
             </Modal>
           </Card.Body>
