@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+#main {
+  height: calc(100vh - 48px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tracking-in-expand-fwd {
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)
+    0.5s both;
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.text-focus-in-1 {
+  animation: text-focus-in 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.1s both;
+}
+.text-focus-in-2 {
+  animation: text-focus-in 0.27s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.5s both;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(6px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+}
+
+.sub-text {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main {
+  text-align: center;
+  justify-content: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social a {
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.linked-in:hover {
+  color: white;
+  transition: 0.2s ease;
+}
+.github:hover {
+  color: white;
+  transition: 0.2s ease;
+}
