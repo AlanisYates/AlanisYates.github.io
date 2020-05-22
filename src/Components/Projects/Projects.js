@@ -9,7 +9,7 @@ const width = "100%";
 
 export const Projects = () => {
   const [modalState, setModalState] = useState(
-    "modal-one" | "modal-two" | ("close" > "close")
+    "modal-one" | "modal-two" | "modal-three" | ("close" > "close")
   );
 
   const handleShowModalOne = () => {
@@ -18,6 +18,10 @@ export const Projects = () => {
 
   const handleShowModalTwo = () => {
     setModalState("modal-two");
+  };
+
+  const handleShowModalThree = () => {
+    setModalState("modal-three");
   };
 
   const handleClose = () => {
@@ -144,6 +148,7 @@ export const Projects = () => {
             </Modal>
           </Card.Body>
         </Card>
+        {/* Card End --------------------------------------------------- */}
         <Card
           bg="dark"
           text="light"
@@ -157,7 +162,7 @@ export const Projects = () => {
               <h2 style={{ fontWeight: "700" }}>File Deliver</h2>
             </Card.Title>
             <Button
-              href="https://laughing-murdock-3b6a46.netlify.app/"
+              href="https://goofy-gates-a6d6a8.netlify.app/"
               target="_blank"
               onClick={handleClose}
               variant="light"
@@ -196,7 +201,7 @@ export const Projects = () => {
                       fontWeight: "500",
                     }}
                   >
-                    This is a static landing page for a file delivery app.{" "}
+                    This is a static landing page for a file delivery app
                   </p>
 
                   <p
@@ -223,7 +228,103 @@ export const Projects = () => {
               </Modal.Body>
               <Modal.Footer>
                 <Button
-                  href="https://github.com/pokalama/Spot-"
+                  href="https://github.com/AlanisYates/FreeDlivery_lpage"
+                  target="_blank"
+                  onClick={handleClose}
+                  style={{
+                    background: "black",
+                    border: "none",
+                    padding: "0.5rem 1rem",
+                  }}
+                >
+                  View Code
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </Card.Body>
+        </Card>
+        {/* Card End --------------------------------------------------- */}
+        <Card
+          bg="dark"
+          text="light"
+          style={{
+            width: width,
+          }}
+        >
+          <Card.Img variant="top" src={require("./Images/rest.jpg")} />
+          <Card.Body>
+            <Card.Title>
+              <h2 style={{ fontWeight: "700" }}>File Deliver</h2>
+            </Card.Title>
+            <Button
+              href="https://goofy-hodgkin-8367af.netlify.app/"
+              target="_blank"
+              onClick={handleClose}
+              variant="light"
+              style={{
+                marginRight: "1rem",
+                fontSize: "1.1rem",
+                fontWeight: "700",
+              }}
+            >
+              Live Demo
+            </Button>
+            <Button
+              variant="light"
+              style={{ fontSize: "1.1rem", fontWeight: "700" }}
+              onClick={handleShowModalThree}
+            >
+              More Info
+            </Button>
+
+            <Modal
+              show={modalState === "modal-three"}
+              onHide={handleClose}
+              size="md"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="example-custom-modal-styling-title">
+                  <h1 style={{ fontWeight: "900" }}>Spot-On</h1>
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <div>
+                  <p
+                    style={{
+                      fontWeight: "500",
+                    }}
+                  >
+                    This is a static landing page for a resturant with. All the animations were custom.{" "}
+
+                  </p>
+
+                  <p
+                    style={{
+                      fontWeight: "500",
+                    }}
+                  ></p>
+
+                  <hr />
+                  <h4 style={{ fontWeight: "900", fontSize: "1.5rem" }}>
+                    Built With:
+                  </h4>
+                  <ul
+                    style={{
+                      fontWeight: "500",
+                      listStyle: "square",
+                    }}
+                  >
+                    <li>HTML</li>
+                    <li>Javascript</li>
+                    <li>SCSS/CSS</li>
+                  </ul>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button
+                  href="https://github.com/AlanisYates/resposive-page"
                   target="_blank"
                   onClick={handleClose}
                   style={{
