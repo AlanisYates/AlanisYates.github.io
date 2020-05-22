@@ -64,20 +64,6 @@ const App = () => {
                 >
                   Projects
                 </Nav.Link>
-                <Nav.Link
-                  href="#"
-                  as={Link}
-                  eventKey={2}
-                  active={expActive}
-                  to="/experience"
-                  onClick={() => {
-                    setExpActive(true);
-                    setProjectActive(false);
-                    setExpand(false);
-                  }}
-                >
-                  Experience
-                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -87,9 +73,6 @@ const App = () => {
             </Route>
             <Route exact path="/projects">
               <Projects />
-            </Route>
-            <Route exact path="/experience">
-              <Experiencs />
             </Route>
           </Switch>
         </Container>
