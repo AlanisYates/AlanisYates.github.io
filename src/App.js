@@ -6,7 +6,6 @@ import Nav from "react-bootstrap/Nav";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import { Projects } from "./Components/Projects/Projects";
-import { Experiencs } from "./Components/Experience/Experiencs";
 import Container from "react-bootstrap/Container";
 
 const App = () => {
