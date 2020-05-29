@@ -311,7 +311,7 @@ export const Projects = () => {
                       fontWeight: "500",
                     }}
                   >
-                    This is a static landing page for a file delivery app
+                    This is a static landing page for a file delivery app.
                   </p>
 
                   <p
