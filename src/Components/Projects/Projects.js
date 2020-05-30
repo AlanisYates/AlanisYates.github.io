@@ -332,7 +332,7 @@ export const Projects = () => {
                   >
                     <li>HTML</li>
                     <li>Javascript</li>
-                    <li>SASS/CSS</li>
+                    <li>SASS/SCSS</li>
                   </ul>
                 </div>
               </Modal.Body>
