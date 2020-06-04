@@ -311,12 +311,12 @@ export const Projects = () => {
                       fontWeight: "500",
                     }}
                   >
-                    This is a static landing page for a file delivery app. The conecpt was from dribble.com.
+                    This is a static landing page for a file delivery app. The concept was from dribble.com.
                   </p>
 
                   <p
                     style={{
-                      fontWeight: "50",
+                      fontWeight: "500",
                     }}
                   ></p>
 
