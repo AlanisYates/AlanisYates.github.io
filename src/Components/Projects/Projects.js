@@ -316,7 +316,7 @@ export const Projects = () => {
 
                   <p
                     style={{
-                      fontWeight: "500",
+                      fontWeight: "50",
                     }}
                   ></p>
 
